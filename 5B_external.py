@@ -1,7 +1,9 @@
+from my_module import * 
+
 def main():
-    miles_to_con = miles_to_km()
-    km_to_con = miles_to_con * 1.61
-    print(miles_to_con, 'is equal to', km_to_con , 'kilometers')
+    miles = float(input('How many miles do you want to convert to kilometers?: '))
+    kilometers =  miles_to_km(miles)
+    print(miles, 'is equal to', kilometers , 'kilometers')
     
     fah_to_con = fah_to_cel()
     cel_to_con = (fah_to_con - 32) * 5/9
@@ -18,10 +20,6 @@ def main():
     in_to_con = inches_to_cm()
     cm_to_con = in_to_con * 2.54
     print(in_to_con, 'inches is equal to', cm_to_con, 'centimeters')
-    
-def miles_to_km():
-    miles = float(input('How many miles do you want to conver to kilometers?: '))
-    return miles
 
 def fah_to_cel():
     fah = float(input('How many degrees in fahrenheit do you want to convert to celsius?: '))
@@ -40,4 +38,5 @@ def inches_to_cm():
     inches = float(input('How many inches to you want to convert to centimeters?: '))
     return inches
     
+
 main()
